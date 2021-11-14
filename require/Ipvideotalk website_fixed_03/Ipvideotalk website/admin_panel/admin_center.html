@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Center</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+    <div class="mw-box">
+
+        <header class="header-part">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <a class="navbar-brand" href="#"> <img src="img/logo_horizontal.png" alt="none" class="img-fluid"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="myicon"><i class="fas fa-bars"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">Meetings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="recordings.html">Recordings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacts/contacts.html">Contacts</a>
+                            </li>
+                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="plans/all_plans.html">Plans</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border-0 active" href="admin_center.html">Admin Center</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    username
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="settings/basic_profile.html">Setting</a>
+                                    <a class="dropdown-item" href="accounts/index.html">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="sect1-part admin_center_comm-part admin_center_sip_trunk-part ">
+            <div class="container-fluid">
+                <div class="left-box">
+
+                    <div class="nav-box">
+                        <ul>
+                            <li><a href="admin_center.html" class="active">SIP Trunk Configuration </a></li>
+                            <li><a href="admin_center/business_profile.html">Business Profile </a></li>
+                            <li><a href="admin_center/statistics.html">Statistics </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-box">
+                    <div class="top_content-box">
+                        <h5>SIP Trunk configuration</h5>
+                    </div>
+                    <div class="content-box">
+                        <div class="sm-box">
+
+                            <div class="row">
+                                <div class="col-lg-8 col-md-10">
+                                    <div class="alert alert-primary">
+                                        <label>Tips:</label>
+                                        <p>1.Please ensure that the IP address of the server is able to connect to IPVT cloud server</p>
+                                        <p>2.Please ensure to configure IPVT server address (pro.ipvideotalk.com) and protocol (TCP port 20000/TLS port 20001) in SIP Trunk server, otherwise the service cannot be used</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-12">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-12">
+                                                <div class="mini-box mini-box1"> <label>Server IP address </label></div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                                <div class="mini-box mini-box2 ">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-6 col-12">
+                                                <div class="mini-box mini-box2">
+                                                    <label class="text-danger m-0 d-none">Please enter the correct IP format</label>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3">
+                                                <div class="mini-box mini-box3"></div>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9">
+                                                <div class="mini-box mini-box3">
+                                                    <small class="d-block mt-1">The voice access number is "900". You can dial this number to attend the IPVT meeting</small>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class=" form-group">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class=" form-group-btn text-left mt-3">
+                                                    <input type="submit" value="Save">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </section>
+
+        <footer class="footer-part">
+            <div class="container-fluid">
+
+
+                <div class="box">
+                    <p>©2021 Grandstream Networks, Inc. All rights reserved.</p>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#" class="last-link">Cookie Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body></html>

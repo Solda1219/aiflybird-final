@@ -1,0 +1,470 @@
+<section class="sect1-part recordings-part package-part ">
+    <div class="container-fluid">
+        <div class="left-box" style= "background-color: '#eaf1f4';">
+
+            <div class="nav-box">
+                <ul>
+                    <li><a routerLink= "/plans/all">All Plans <span>{{allPlans.length}}</span></a></li>
+                    <li><a routerLink='/plans/about-expire'>About to Expire<span>{{aboutExpire.length}}</span></a></li>
+                    <li><a routerLink='/plans/expired'>Expired<span>{{expired.length}}</span></a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="right-box">
+            <div class="top_content-box" style= "background: '#eaf1f4';">
+                <h5>Buy a New Plan</h5>
+            </div>
+            
+            <div class="content-box" style= "margin-top: 0px;">
+                <div class="sm-box ">
+                    <div class="meet_now_form-box ">
+                        <div class="cust_col_7">
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mini-box mini-box1"><label>Select Plan: </label></div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="plan-box">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="box cust_box1" (click)= "custBoxClick1()">
+                                                        <h5>Pro</h5>
+                                                        <h3><sup>$ </sup>9.99</h3>
+                                                        <p>Per month Billed annually</p>
+                                                        <label>100 Participants</label>
+                                                        <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="box cust_box2" (click)= "custBoxClick2()">
+                                                        <h5>Business</h5>
+                                                        <h3><sup>$ </sup>14.99</h3>
+                                                        <p>Per month Billed annually</p>
+                                                        <label>150 Participants</label>
+                                                        <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cust_col_7">
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mini-box mini-box1"><label>Additional Participants Plan: </label></div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="plan-box">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="box2 cust_box3" (click)= "custBoxClick3()">
+                                                        <label>50 Participants</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="box2 cust_box4" (click)= "custBoxClick4()">
+                                                        <label>100 Participants</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cust_col_7">
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mini-box mini-box1"><label>Additional Storage Plan: </label></div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="plan-box">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="box2 cust_box5" (click)= "custBoxClick5()">
+                                                        <label>50GB Storages</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cust_col_7">
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mini-box mini-box1"><label>Additional Webinar Plan: </label></div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="plan-box">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6 col-6">
+                                                    <div class="box2 addi_web_box cust_box6" (click)= "custBoxClick6()">
+                                                        <label> Webinar 500 Participants</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6 col-6">
+                                                    <div class="box2 addi_web_box cust_box7" (click)= "custBoxClick7()">
+                                                        <label> Webinar 1000 Participants</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6 col-6">
+                                                    <div class="box2 addi_web_box cust_box8" (click)= "custBoxClick8()">
+                                                        <label> Webinar 3000 Participants</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cust_col_7">
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mini-box mini-box1"><label><sup>*</sup>Select Renewal Duration: </label></div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="plan-box">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="box2 cust_box9" (click)= "custBoxClick9()">
+                                                        <label> 1 Year</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <div class="box2 cust_box10" (click)= "custBoxClick10()">
+                                                        <label> 2 Years</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <div class="box2 cust_box11" (click)= "custBoxClick11()">
+                                                        <label> 3 Years</label> <i class="fas fa-check"></i>
+                                                        <i class="fas fa-caret-right"></i>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="cust_col_7">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mini-box mini-box1"><label>Billing Address: </label></div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="alert pt-4 pb-4 p-3 cust_alert-secondary meet_now_form-box">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box1"><label><sup>*</sup>Street Address Line1 </label></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box2"><input type="text" id= "street1" class="form-control"></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box3"><label>0-60 characters</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+
+
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box1"><label>Street Address Line2 </label></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box2"><input type="text" id= "street2" class="form-control" placeholder="Optional"></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box3"><label>0-60 characters</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box1"><label><sup>*</sup>City </label></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box2"><input type="text" id= "city" class="form-control"></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box3"><label>0-60 characters</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+
+
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box1"><label><sup>*</sup>State/Province </label></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box2"><input type="text" id= "province" class="form-control"></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box3"><label>0-60 characters</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box1"><label><sup>*</sup>ZIP/Postal </label></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box2"><input type="text" class="form-control" id= "postal"></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box3"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box1"><label><sup>*</sup>Country </label></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box2"><select class="form-control" id= "country">
+                                                                <option [value]="country.id" *ngFor= "let country of countrys;">{{country.name}}</option>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <div class="mini-box mini-box3"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        
+
+
+                        <div class="cust_col_7">
+                            <div class="form-group form_price_details-box">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="mini-box mini-box1"></div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-12 ">
+                                        <div class="alert alert-warning">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><label>Pro :1 year (06/24/2021-06/25/2022) </label></td>
+                                                        <td><label>Price: </label></td>
+                                                        <td><label>$119.88 USD </label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label>50 Participants :1 year (06/24/2021-06/25/2022) </label> </td>
+                                                        <td><label>Price: </label></td>
+                                                        <td><label>$119.88 USD </label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label>50GB Storages :1 year (06/24/2021-06/25/2022) </label> </td>
+                                                        <td><label>Price:</label> </td>
+                                                        <td><label>$119.88 USD </label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label>Webinar 1000 Participants :1 year (06/24/2021-06/25/2022)</label> </td>
+                                                        <td><label>Price:</label> </td>
+                                                        <td><label>$119.88 USD</label> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> </td>
+                                                        <td><label>Total:</label> </td>
+                                                        <td><label>$119.88 USD</label> </td>
+                                                    </tr>
+                                                    <tr class="bg-light">
+                                                        <td> </td>
+                                                        <td><label>Payment Amount:</label> </td>
+                                                        <td><label>$119.88 USD</label> </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cust_col_7">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mini-box mini-box1"><label>Accepted Payment Methods: </label></div>
+                                    </div>
+                                    <div class="col-md-8 ">
+                                        <div class="mini-box mini-box2"><img src="../../../assets/theme/admin-panel/img/payment_img.png" alt="none" class="img-fluid mb-2"><small class="d-block">To pay with a credit or debit card, select "Pay with Debit or Credit Card" on the next screen. Credit and debit card payments are made through Paypal.</small></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer_content-box" style= "background: '#eaf1f4';">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-9">
+                        <div class=" form-group-btn">
+                            <input type="submit" value="Pay" (click)= "buyPlan()">
+                            <a routerLink= "/plans/all">Cancel</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- feed_back -->
+    <div class="modal fade comm_popup-box feed_back-popup_box" id="feed_back_box" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Feedback</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="meet_now_form-box">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Please enter your feedback"></textarea>
+
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="custom-file" for="customFile">
+                                        <input type="file" class="d-none" id="customFile">
+                                        <label><i class="fas fa-cloud-upload-alt"></i> Upload Attachment (Up to 5 can be uploaded)</label>
+                                        <p>( File type: tar, zip, rar, jpg, png, mp4, avi, wav, txt, doc, pdf, gz )</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="row create_extra_email_boxes">
+                                        <div class="col-12">
+                                            <div class="mini-box mini-box1 "> <label class=" float-left"><sup>*</sup> Please enter your email address so that we can contact you in time.</label></div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="mini-box mini-box2">
+                                                <input type="email" class="form-control">
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <a href="#" class="add_email_box-btn"><i class="fa fa-plus"></i> Add</a>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <div class=" form-group-btn mt-4">
+                                    <a href="#" data-dismiss="modal">Cancel</a>
+                                    <input type="submit" value="Submit">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- feed_back -->
+
+
+</section>

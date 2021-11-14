@@ -1,0 +1,115 @@
+<header class="header-part">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" routerLink="/dashboard"><img src="../../../assets/theme/img/logo.png" alt="none"
+          class="img-fluid dashboard-i"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="myicon"><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/plans">PlANS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/faq">FAQ</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav  my-2 my-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/join-meeting">JOIN A MEETING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">SIGN IN</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link last-link" routerLink="/signup">FREE BASIC PLAN</a>
+          </li>
+          <li class= "nav-item">
+            <a class="nav-link" [matMenuTriggerFor]="settingsMenu">
+              {{cf.translate('Language')}}
+            </a>
+            <mat-menu #settingsMenu class="lngdropdown">
+              
+              <menu mat-menu-item class="m-0"><a class="dropdown-item" (click)="changeLang('simplified_chinese')"
+                  style="cursor: pointer;">{{cf.translate('simplified_chinese')}}</a></menu>
+              <menu mat-menu-item class="m-0"><a class="dropdown-item" (click)="changeLang('traditional_chinese')"
+                  style="cursor: pointer;">{{cf.translate('traditional_chinese')}}</a></menu>
+              <menu mat-menu-item class="m-0"><a class="dropdown-item" (click)="changeLang('english')"
+                  style="cursor: pointer;">{{cf.translate('english')}}</a></menu>
+              <menu mat-menu-item class="m-0"><a class="dropdown-item" (click)="changeLang('korean')"
+                  style="cursor: pointer;">{{cf.translate('korean')}}</a></menu>
+              <menu mat-menu-item class="m-0"><a class="dropdown-item" (click)="changeLang('japanese')"
+                  style="cursor: pointer;">{{cf.translate('japanese')}}</a></menu>
+            </mat-menu>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<router-outlet></router-outlet>
+<!-- footbar -->
+<footer class="footer-part ">
+  <div class="footer_top-box comm_padd">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-5">
+          <div class="box">
+            <h5>INFORMATION</h5>
+            <a href="#">Products</a>
+            <a href="#">Solutions</a>
+            <a href="#">Support</a>
+            <a href="#">Events</a>
+            <a href="#">Partners</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-7">
+          <div class="box">
+            <h5>Resources</h5>
+            <a href="#">About Grandstream</a>
+            <a href="#">Contact us</a>
+            <div class="app_link-box">
+              <div class="row">
+                <div class="col-6"><img src="../../../assets/theme/img/resources_google_play_btn_default.png" alt="none"
+                    class="img-fluid"></div>
+                <div class="col-6"><img src="../../../assets/theme/img/resources_appstore_btn_default.png" alt="none"
+                    class="img-fluid"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-5">
+          <div class="box">
+            <h5>Contact</h5>
+            <a href="#">About Grandstream</a>
+            <a href="#">Contact us</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-7">
+          <div class="box">
+            <h5>CONNECT WITH US</h5>
+            <div class="icon-box">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer_bottom-box comm_padd">
+    <div class="container">
+      <p>© 2021 Grandstream Networks, Inc.</p>
+    </div>
+  </div>
+</footer>
+<app-alert-view></app-alert-view>

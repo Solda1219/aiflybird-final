@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29006c3f-e340-40f8-9d38-a6ac98229530" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1uTmltbBIRjRxtJaK6Yz4spSbYe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin_panel/accounts" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MyProject\tasks\2020_12_09_lin_web\feiniaolubo\Design\video meeting manager\Ipvideotalk website\admin_panel\accounts" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29006c3f-e340-40f8-9d38-a6ac98229530" name="Default Changelist" comment="" />
+      <created>1624698107973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624698107973</updated>
+      <workItem from="1624698109383" duration="633000" />
+      <workItem from="1624754103485" duration="595000" />
+      <workItem from="1624842905339" duration="1805000" />
+      <workItem from="1624902595585" duration="603000" />
+      <workItem from="1624929564776" duration="813000" />
+      <workItem from="1624935817989" duration="256000" />
+      <workItem from="1625495951563" duration="9293000" />
+      <workItem from="1629899740936" duration="7556000" />
+      <workItem from="1629950119881" duration="4909000" />
+      <workItem from="1630749969151" duration="757000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2610" y="224" key="FileChooserDialogImpl" timestamp="1629963845248">
+      <screen x="1920" y="7" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="224" key="FileChooserDialogImpl/0.0.1920.1040/1920.7.1920.1040@1920.7.1920.1040" timestamp="1629963845248" />
+    <state x="2491" y="308" key="com.intellij.ide.util.TipDialog" timestamp="1624935872402">
+      <screen x="1920" y="7" width="1920" height="1040" />
+    </state>
+    <state x="2491" y="308" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.7.1920.1040@1920.7.1920.1040" timestamp="1624935872402" />
+    <state x="2335" y="202" width="1214" height="700" key="find.popup" timestamp="1629963650239">
+      <screen x="1920" y="7" width="1920" height="1040" />
+    </state>
+    <state x="2335" y="202" width="1214" height="700" key="find.popup/0.0.1920.1040/1920.7.1920.1040@1920.7.1920.1040" timestamp="1629963650239" />
+    <state x="2452" y="240" key="run.anything.popup" timestamp="1625501503358">
+      <screen x="1920" y="7" width="1920" height="1040" />
+    </state>
+    <state x="2452" y="240" key="run.anything.popup/0.0.1920.1040/1920.7.1920.1040@1920.7.1920.1040" timestamp="1625501503358" />
+  </component>
+</project>

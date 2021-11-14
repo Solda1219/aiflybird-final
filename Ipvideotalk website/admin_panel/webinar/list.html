@@ -1,0 +1,1292 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>List</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+    <div class="mw-box">
+
+        <header class="header-part">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <a class="navbar-brand" href="#"> <img src="../img/logo_horizontal.png" alt="none" class="img-fluid"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="myicon"><i class="fas fa-bars"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../index.html">Meetings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../recordings.html">Recordings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../contacts/contacts.html">Contacts</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../plans/all_plans.html">Plans</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border-0" href="../admin_center.html">Admin Center</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    username
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="../settings/basic_profile.html">Setting</a>
+                                    <a class="dropdown-item" href="../accounts/index.html">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="sect1-part meeting_page_basic_info-part meeting_box-part">
+            <div class="container-fluid">
+                <div class="left-box">
+                    <div class="top_btn-box">
+                        <a href="#" class="cust_btn1" data-toggle="modal" data-target="#meet_now_popup_box">Meet Now <i class="fas fa-plus"></i></a>
+                        <div class=" dropright">
+                            <a class="cust_btn2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Schedule Meeting <i class="fas fa-plus"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <i class="fas fa-caret-left"></i>
+                                <a href="../meeting/list.html">Meeting</a>
+                                <a href="../webinar/list.html">Webinar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-box">
+                        <ul>
+                            <li><a href="#">Upcoming <span>0</span></a></li>
+                            <li><a href="#">History <span>0</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-box">
+                    <div class="top_content-box">
+                        <div class="nav-box">
+                            <ul>
+                                <li><a href="list.html" class="active">Basic Info</a></li>
+                                <li><a href="custom_registration_page.html">Custop Registration Page</a></li>
+                                <li><a href="poll.html">Poll</a></li>
+                                <li><a href="email_setting.html">Email Setting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="content-box">
+                        <div class="sm-box">
+                            <div class="meet_now_form-box">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Plan</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="mini-box mini-box2">
+                                                        <select class="custom-select">
+                                                            <option selected>Select link plan/host device</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Subject</label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3"> <label>1-120 Characters</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Organizer</label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 col-12">
+
+                                                    <div class="mini-box mini-box2">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Time Zone:</label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+
+                                                    <div class="mini-box mini-box2">
+                                                        <select class="custom-select">
+                                                            <option selected>Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+
+                                                    <div class="mini-box mini-box2">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Start Time:</label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <input type="date" class="form-control">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <input type="time" class="form-control">
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Duration:</label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="mini-box mini-box2">
+                                                                <select class="custom-select">
+                                                                    <option selected>1</option>
+                                                                    <option value="1">0</option>
+                                                                    <option value="2">1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div class="mini-box mini-box3">
+                                                                <label class="mt-2">hr</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <div class="mini-box mini-box2">
+                                                                <select class="custom-select">
+                                                                    <option selected>1</option>
+                                                                    <option value="1">10</option>
+                                                                    <option value="2">20</option>
+                                                                    <option value="2">30</option>
+                                                                    <option value="2">40</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div class="mini-box mini-box3">
+                                                                <label class="mt-2">min</label>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Password</label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="password" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                        <label>0-8 digits</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Description: </label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                        <label>0/500 characters</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Agenda: </label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                        <label>0/500 characters</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Phone Access Numbers: </label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="text" class="form-control" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                        <a href="#" data-toggle="modal" data-target="#select_number_popup">Select number</a>
+                                                    </div>
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Server's Preferred Location: </label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2">
+                                                        <select class="custom-select">
+                                                            <option selected>1</option>
+                                                            <option value="1">10</option>
+                                                            <option value="2">20</option>
+                                                            <option value="2">30</option>
+                                                            <option value="2">40</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                        <label>0/500 characters</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Meeting Settings:</label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck1">
+                                                                    <label for="exampleCheck1">Automatic Recording</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck2">
+                                                                    <label for="exampleCheck2">Meeting Locked</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> </div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck1">
+                                                                    <label for="exampleCheck1"> Start a poll</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Attendee Controls: </label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck3">
+                                                                    <label for="exampleCheck3">Muted by Host on Entry</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck4">
+                                                                    <label for="exampleCheck4">Play Beep When Attendee Joins/Leaves Meeting</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck5">
+                                                                    <label for="exampleCheck5">Display Attendees List/Status</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck6">
+                                                                    <label for="exampleCheck6">Allow Chat</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck7">
+                                                                    <label for="exampleCheck7">Disable Presentation</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <hr>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Invitees</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <textarea placeholder="Separate invites emails with enter or semicolon key" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3"> <label>Invitees are included in the 49 person limit</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 mt-3 mb-3">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1">
+                                                        <label>Panelists:
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="mini-box mini-box2 add_mini_box">
+                                                        <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#add_profile_info"><i class="fa fa-plus"></i> Add</a>
+                                                        <p>You can view participantsts in the meeting, and synchronize to the Custom Registration page.</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Meeting Settings:</label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-10">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check d-block">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <input type="checkbox" id="meet_register">
+                                                                        <label for="meet_register"> Must register to join meeting (Webinar) <a href="custom_registration_page.html" class="text-decoration-none">Custom Registration Page</a></label>
+                                                                    </div>
+                                                                    <p class="d-block">If checked, the system will provide a meeting registration link, all participants except invitees should join the meeting via the link.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="mini-box mini-box2 bg-light p-3">
+                                                        <h5>Approval:</h5>
+                                                        <div class="form-group form-check d-block mt-3">
+
+                                                            <div class="d-flex align-items-center">
+                                                                <input type="radio" id="automatically_approve" name="approve">
+                                                                <label for="automatically_approve" class="font-weight-bold"> Automatically approve </label>
+                                                            </div>
+                                                            <p class="d-block">The system will automatically approve and send registrants the confirmation email
+                                                            </p>
+                                                        </div>
+                                                        <div class="form-group form-check d-block">
+                                                            <div class="d-flex align-items-center">
+                                                                <input type="radio" id="manually_approve" name="approve">
+                                                                <label for="manually_approve" class="font-weight-bold"> Manually approve </label>
+                                                            </div>
+                                                            <p class="d-block">The organizer must appove manually before the registrants receive the confirmation email</p>
+                                                        </div>
+                                                        <br>
+                                                        <hr>
+                                                        <h5>Notifications:</h5>
+                                                        <div class="form-group form-check d-block mt-3">
+                                                            <div class="d-flex align-items-center">
+                                                                <input type="checkbox" id="Send_an_email">
+                                                                <label for="Send_an_email"> Send an email to the host when someone registers </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Post Attendee URL: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="text" value="http://" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3"> <label>0-255 characters</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_content-box">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-9">
+                                <div class=" form-group-btn">
+                                    <input type="submit" value="Schedule">
+                                    <a href="#" data-dismiss="modal">Cancel</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- add_profile_info -->
+            <div class="modal fade" id="add_profile_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <img src="../img/important_imgs/default_host.png" alt="none" class="mt-3 img-fluid">
+                                    <a href="#" class="d-block p-2 pl-4 pr-4 mt-3 cust_btn2">Add photo</a>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group mt-4">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email/IPVT ID</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Notes</label>
+                                        <textarea class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label></label>
+                                        <textarea class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group-btn mt-4 mb-3">
+                                        <a class="cust_btn2">Save</a>
+                                        <a href="#" data-dismiss="modal">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- add_profile_info -->
+
+
+
+            <!-- select_number_popup -->
+
+            <div class="modal comm_popup-box fade" id="select_number_popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Please Select Phone Access Numbers</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>The selected number will show up in the invitation email,two numbers can be show at most</p>
+                            <hr>
+                            <p>Show URLs of all numbers in the invitation email</p>
+
+                            <div class="form-group-btn mt-3 mb-3">
+                                <a class="bg-light text-secondary">Save</a>
+                                <a href="#" data-dismiss="modal">Cancel</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- select_number_popup -->
+
+            <!-- meet_now_popup_box -->
+            <div class="modal fade comm_popup-box meet_now-popup_box" id="meet_now_popup_box" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Meet Now</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="meet_now_form-box">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Plan</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2">
+                                                        <select class="custom-select">
+                                                            <option selected>Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3"> <a href="#" data-toggle="modal" data-target="#instant_meeting_template">More Setting</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Subject</label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3"> <label>Meeting subject cannot be empty</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Password</label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="password" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                        <label>0-8 digits</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Invitees</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <textarea placeholder="Separate invites emails with enter or semicolon key" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3"> <label>Invitees are included in the 49 person limit</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class=" form-group-btn">
+                                            <input type="submit" value="Meet now">
+                                            <a href="#" data-dismiss="modal">Cancel</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- meet_now_popup_box -->
+
+            <!-- Modal -->
+            <div class="modal fade comm_popup-box instant_meeting_template-popup_box" id="instant_meeting_template" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Instant Meeting Template</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="meet_now_form-box">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Plan</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="mini-box mini-box2">
+                                                        <label>Basic (up to 50)</label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Subject</label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3"> <label>1-120 Characters</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Organizer</label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Time Zone:</label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+
+                                                    <div class="mini-box mini-box2">
+                                                        <select class="custom-select">
+                                                            <option selected>Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup>Duration:</label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="mini-box mini-box2">
+                                                                <select class="custom-select">
+                                                                    <option selected>1</option>
+                                                                    <option value="1">0</option>
+                                                                    <option value="2">1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div class="mini-box mini-box3">
+                                                                <label class="mt-2">hr</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <div class="mini-box mini-box2">
+                                                                <select class="custom-select">
+                                                                    <option selected>1</option>
+                                                                    <option value="1">10</option>
+                                                                    <option value="2">20</option>
+                                                                    <option value="2">30</option>
+                                                                    <option value="2">40</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div class="mini-box mini-box3">
+                                                                <label class="mt-2">min</label>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Password</label></div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2"> <input type="password" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                        <label>0-8 digits</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Meeting Settings:</label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck1">
+                                                                    <label for="exampleCheck1">Automatic Recording</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck2">
+                                                                    <label for="exampleCheck2">Meeting Locked</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Attendee Controls: </label></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck3">
+                                                                    <label for="exampleCheck3">Muted by Host on Entry</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck4">
+                                                                    <label for="exampleCheck4">Play Beep When Attendee Joins/Leaves Meeting</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck5">
+                                                                    <label for="exampleCheck5">Display Attendees List/Status</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck6">
+                                                                    <label for="exampleCheck6">Allow Chat</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"></div>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mini-box mini-box2">
+                                                                <div class="form-group form-check">
+                                                                    <input type="checkbox" id="exampleCheck7">
+                                                                    <label for="exampleCheck7">Disable Presentation</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-12">
+                                        <div class=" form-group-btn">
+                                            <input type="submit" value="Save">
+                                            <a href="#" data-dismiss="modal">Cancel</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </section>
+
+        <footer class="footer-part">
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="box">
+                            <p>©2021 Grandstream Networks, Inc. All rights reserved.</p>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#" class="last-link">Cookie Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+
+
+</body></html>

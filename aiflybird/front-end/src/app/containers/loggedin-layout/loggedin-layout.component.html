@@ -1,0 +1,81 @@
+<div class="mw-box">
+
+    <header class="header-part">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" routerLink= "/dashboard"> <img src="../../../assets/theme/admin-panel/img/logo_horizontal.png" style= "width: 120px" alt="none" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="myicon"><i class="fas fa-bars"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" routerLink= "/meetings">Meetings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recordings.html">Recordings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink= "/contacts">Contacts</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink= "/plans/all">Plans</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border-0" href="admin_center.html">Admin Center</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{userName}}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- <a class="dropdown-item" href="settings/basic_profile.html">Setting</a> -->
+                                <a class="dropdown-item" (click)= "signOut()">Sign out</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <select class="custom-select lang-sel">
+                                <option>English</option>
+                                <option>Chinese</option>
+                                <option>Russian</option>
+                            </select>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <router-outlet></router-outlet>
+    <footer class="footer-part">
+        <div class="container-fluid">
+
+
+            <div class="box">
+                <p>©2021 Grandstream Networks, Inc. All rights reserved.</p>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <!--                        Share Meeting Popup Box show button share_meeting_box-->
+
+                    <!--                        <li><a href="#" class="last-link" data-toggle="modal" data-target="#share_meeting_box">Share Meeting</a></li>-->
+                    <!--                        <li><a href="#" class="last-link" data-toggle="modal" data-target="#scan_user_info_box">Scan</a></li>-->
+
+                    <!--                        scan user info box Popup Box show button scan_user_info_box-->
+
+                    <li><a href="#" class="last-link">Cookie Settings</a></li>
+                    <li><a href="#" class="last-link font-weight-bold cust_btn_color" data-toggle="modal"
+                            data-target="#feed_back_box"> <i class="far fa-edit"></i>Feed Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>

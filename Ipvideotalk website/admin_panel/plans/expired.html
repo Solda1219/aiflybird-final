@@ -1,0 +1,304 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Expired</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+    <div class="mw-box">
+
+        <header class="header-part">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <a class="navbar-brand" href="#"> <img src="../img/logo_horizontal.png" alt="none" class="img-fluid"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="myicon"><i class="fas fa-bars"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="../index.html">Meetings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="../recordings.html">Recordings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="../contacts/contacts.html">Contacts</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../plans/about_to_expired.html">Plans</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border-0" href="../admin_center.html">Admin Center</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    username
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="../settings/basic_profile.html">Setting</a>
+                                    <a class="dropdown-item" href="../accounts/index.html">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="sect1-part recordings-part contact_comm-part contacts-part">
+            <div class="container-fluid">
+                <div class="left-box">
+
+                    <div class="nav-box">
+                        <ul>
+                            <li><a href="all_plans.html">All Plans <span>0</span></a></li>
+                            <li><a href="about_to_expired.html">About to Expire<span>0</span></a></li>
+                            <li><a href="expired.html" class="active">Expired<span>0</span></a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="right-box">
+                    <div class="top_content-box">
+                        <div class="nav_btn-box">
+                            <ul>
+                                <li><a href="package.html"><i class="fas fa-shopping-cart"></i> Buy a New Plan </a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#redeem_code"><i class="fas fa-exchange-alt"></i> Redeem Code </a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="search-box">
+                            <input type="search" placeholder="Enter Subject/Meeting ID/Host Device">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="sm-box">
+
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><input type="checkbox">Current Plan</th>
+                                            <th scope="col">Owner</th>
+                                            <th scope="col">Expiration Date</th>
+                                            <th scope="col">Subscription Date</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>@mdo</td>
+                                        </tr>
+-->
+
+                                        <div class="empty_show_msg-box">
+
+                                            <p>No expired plan</p>
+                                        </div>
+
+                                    </tbody>
+                                </table>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- add_contacts -->
+            <div class="modal comm_popup-box fade" id="redeem_code" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog  modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Please Enter The Redeem Code</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+
+
+                            <div class="meet_now_form-box">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group mt-5">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="mini-box mini-box2">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="mini-box mini-box2">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="mini-box mini-box2">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="cust_btn_color text-center d-inline-block w-100 mt-3">See more detail here</a>
+
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class=" form-group-btn">
+                                            <input type="submit" value="Ok">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- redeem_code -->
+
+
+
+            <!-- feed_back -->
+            <div class="modal fade comm_popup-box feed_back-popup_box" id="feed_back_box" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Feedback</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="meet_now_form-box">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Please enter your feedback"></textarea>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="custom-file" for="customFile">
+                                                <input type="file" class="d-none" id="customFile">
+                                                <label><i class="fas fa-cloud-upload-alt"></i> Upload Attachment (Up to 5 can be uploaded)</label>
+                                                <p>( File type: tar, zip, rar, jpg, png, mp4, avi, wav, txt, doc, pdf, gz )</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row create_extra_email_boxes">
+                                                <div class="col-12">
+                                                    <div class="mini-box mini-box1 "> <label class=" float-left"><sup>*</sup> Please enter your email address so that we can contact you in time.</label></div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="mini-box mini-box2">
+                                                        <input type="email" class="form-control">
+
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <a href="#" class="add_email_box-btn"><i class="fa fa-plus"></i> Add</a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class=" form-group-btn mt-4">
+                                            <a href="#" data-dismiss="modal">Cancel</a>
+                                            <input type="submit" value="Submit">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- feed_back -->
+
+
+
+        </section>
+
+        <footer class="footer-part">
+            <div class="container-fluid">
+
+
+                <div class="box">
+                    <p>©2021 Grandstream Networks, Inc. All rights reserved.</p>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <!--                        <li><a href="#" class="last-link" data-toggle="modal" data-target="#share_meeting_box">Share Meeting</a></li>-->
+                        <!--                        <li><a href="#" class="last-link" data-toggle="modal" data-target="#scan_user_info_box">Scan</a></li>-->
+                        <li><a href="#" class="last-link">Cookie Settings</a></li>
+                        <li><a href="#" class="last-link font-weight-bold cust_btn_color" data-toggle="modal" data-target="#feed_back_box"> <i class="far fa-edit"></i>Feed Back</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+
+
+</body></html>

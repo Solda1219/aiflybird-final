@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<thirdparty utc="1624009580" last_update="Fri Jun 18 17:46:20">
+	<info version="4.0.0" max_meeting="200" max_connection="50" max_outside_connection="50" max_playback_connection="50" max_outside_playback_connection="50" max_reserved_connection="0" max_reserved_outside_connection="0" ip_range="117.21.178.0/24" target_bitrate="256.0 Kbps" test_wizard_link="wizard_m.jnj"/>
+	<directory>
+		<user vid="0" session_index="27" name="service" userid="109" meetingid="1623948204111" duration="11700" recording="1" elapsed_second1="61307" elapsed_second2="61307" max_participant="1" owner_present="1"/>
+	</directory>
+	<msgr_directory>
+	</msgr_directory>
+</thirdparty>

@@ -1,0 +1,42 @@
+
+<div class="center_content-box ">
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="box left-box">
+          <div class="inner-box">
+            <img src="../../../assets/theme/admin-panel/account/img/main_logo_icon.png" alt="none" class="img-fluid">
+            <h2>IPVideoTalk Meetings</h2>
+            <h5>Meet from anywhere, anytime on nearly any device</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="box right-box">
+          <div class="form-box">
+            <h3>Sign In</h3>
+            <form [formGroup]="formGroup" #myform="ngForm" (ngSubmit)="login()">
+              <div class="form-group">
+                <div class="sm-box"><i class="fas fa-user"></i>
+                  <input type="text" placeholder="Username or Email" formControlName="username">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="sm-box"><i class="fas fa-lock"></i>
+                  <input type="password" placeholder="Password" formControlName= "password">
+                </div>
+              </div>
+              <div class="form-group">
+                <a routerLink= "/reset-password">Forgot Password</a>
+              </div>
+              <div class="form-group-btn">
+                <input type="submit" value="Sign In">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

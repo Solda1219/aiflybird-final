@@ -1,0 +1,490 @@
+<section class="sect1-part recordings-part contact_comm-part contacts-part">
+    <div class="container-fluid">
+        <div class="left-box" style= "background-color: '#eaf1f4';">
+
+            <div class="nav-box">
+                <ul>
+                    <li><a routerLink= "/contacts">My Contacts </a></li>
+                    <li><a routerLink= "/business_contacts" class="active">Business Contacts </a></li>
+                </ul>
+            </div>
+            <div class="nav-box2">
+                <div class="btn-box p-3">
+                    <a href="#" class="d-block text-secondary " style= "background-color: transparent;" data-toggle="modal" data-target="#new_department" (click)= "createOnDept()"><i class="fas fa-plus bg-success text-light pl-3 pr-3 pt-1 pb-1"></i> New Departments</a>
+                    <ul class="list-group mt-2">
+                        <li class="list-group-item d-flex justify-content-between list-group-item-action active align-items-center" style= "background-color: #2ca2d7; cursor: pointer;" (click)="filterByDeptId(0)">
+                          {{company}}
+                          <span class="badge badge-primary badge-pill">{{businessContacts.length}}</span>
+                        </li>
+                        <li *ngFor="let dept of depts; let i = index"  (mouseenter) ="enterDept(dept)" (mouseleave) ="leaveDept(dept)" class="list-group-item d-flex justify-content-between align-items-center">
+                            <span style= "cursor: pointer;" (click)="filterByDeptId(dept.id)">{{dept.name}}</span>
+                            <span *ngIf= "deptEntered==dept.id">
+                                <i  data-toggle="modal" data-target="#new_department" (click)= "editOnDept(dept)" class= "fa fa-edit" style= "cursor: pointer;"></i>
+                                <i data-toggle="modal" data-target="#del_department" (click)= "delOnDept(dept)" class= "fa fa-trash" style= "cursor: pointer;"></i>
+                            </span>
+                            <span class="badge badge-primary badge-pill">{{dept.length}}</span>
+                            
+                          <!-- <span class="badge badge-primary badge-pill" style= "background-color: #2ca2d7" >2</span> -->
+                        </li>
+                        
+                      </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="right-box">
+            <div class="top_content-box">
+                <div class="nav_btn-box">
+                    <ul>
+                        <li><a href="#" data-toggle="modal" data-target="#add_contacts" (click)= "createOnBusinessContact()"><i class="fas fa-plus"></i> Add </a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#imports_contacts"><i class="fas fa-file-download"></i> Import </a></li>
+                        <li><a (click)="exportToExcel()"><i class="fas fa-file-export" ></i> Export</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="search-box">
+                    <input type="search" (keyup)="filter($event)" placeholder="Enter Name/Email/Phone/Department">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="content-box">
+                <div class="sm-box" style= "padding:0px">
+
+                    <div class="table-responsive" style="height: 100%;">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr style= "background-color: '#eaf1f4';">
+                                    <th style= "background-color: '#eaf1f4';" scope="col"><input type="checkbox">Name</th>
+                                    <th style= "background-color: '#eaf1f4';" scope="col">Email</th>
+                                    <th style= "background-color: '#eaf1f4';" scope="col">Phone</th>
+                                    <th style= "background-color: '#eaf1f4';" scope="col">Department</th>
+                                    <th style= "background-color: '#eaf1f4';" scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr *ngFor= "let contact of filteredContacts; let i = index" (mouseenter) ="enterBusinessContact(contact)" (mouseleave) ="leaveBusinessContact(contact)">
+                                    <th scope="row" style= "width: 25%"><label><input type="checkbox" class="mr-1">{{contact.name}}</label></th>
+                                    <td style= "width: 25%"><label>{{contact.email}}</label></td>
+                                    <td style= "width: 15%"><label>{{contact.phone}}</label></td>
+                                    <td style= "width: 20%"><label>{{contact.dept_name}}</label></td>
+                                    <td style= "width: 15%"><button *ngIf= "businessContactEntered==contact.id" class= "btn primary-btn" data-toggle="modal" data-target="#add_contacts" (click)= "editOnBusinessContact(contact)" style= "background-color: #2d90d5;">Edit</button> 
+                                        <button *ngIf= "businessContactEntered==contact.id" class= "btn primary-btn" data-toggle="modal" data-target="#del_contacts" (click)= "delOnBusinessContact(contact)" style= "background-color: #ed7373;">Delete</button></td>
+                                </tr>
+
+
+                                <div class="empty_show_msg-box">
+                                
+                                <p *ngIf= "filteredContacts.length==0">The business has no contacts,, please try <a href="#" data-toggle="modal" data-target="#add_contacts" (click)= "createOnBusinessContact()">"Add Contact"</a> or <a href="#" data-toggle="modal" data-target="#imports_contacts">"Import Contacts"</a></p>
+
+                                </div>
+                            </tbody>
+                        </table>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add_contacts -->
+    <div class="modal comm_popup-box fade" id="add_contacts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{businessContactStatus=='create'? 'Add Contact': 'Edit Contact'}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form [formGroup]="BusinessContactGroup" #myform="ngForm" (ngSubmit)="createBusinessContact()">
+                        <div class="meet_now_form-box">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-12">
+                                                <div class="mini-box mini-box1"> <label><sup>*</sup> Name:</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="mini-box mini-box2">
+                                                    <input type="text" class="form-control" formControlName= "name">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <div class="mini-box mini-box3"> <label>1-24 characters</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-12">
+                                                <div class="mini-box mini-box1"> <label><sup>*</sup>Email: </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="mini-box mini-box2">
+                                                    <input type="email" class="form-control" formControlName= "email">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <div class="mini-box mini-box3">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-12">
+                                                <div class="mini-box mini-box1"> <label><sup>*</sup>Phone: </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="mini-box mini-box2">
+                                                    <input type="number" class="form-control" formControlName= "phone">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <div class="mini-box mini-box3">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-12">
+                                                <div class="mini-box mini-box1"> <label><sup>*</sup>Department: </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="mini-box mini-box2">
+                                                    <select class="form-control" formControlName= "dept_id">
+                                                        <option *ngFor="let dept of depts; let i = index" [value]='dept.id' >{{dept.name}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <div class="mini-box mini-box3">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class=" form-group-btn">
+                                        <input type="submit" value="Save">
+                                        <a href="#" data-dismiss="modal">Cancel</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- add_contacts -->
+
+    <!-- imports_contacts -->
+    <div class="modal comm_popup-box fade" id="imports_contacts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Import Contacts</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+
+                    <div class="meet_now_form-box">
+                        <form [formGroup]="ImportContactGroup" (ngSubmit)="importContact()">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul>
+                                        <li class="mb-2">1. Supported formats: xls, xlsx
+                                        </li>
+                                        <li class="mb-2">2. The department being imported should be in the following formats: .xls, .xlsx
+                                        </li>
+                                        <li class="mb-2">3. If the department does not exist, the system will create a new one automatically.
+                                        </li>
+                                        <li class="mb-2">4. Please ensure that your document template is correct. <a href="http://www.aiflybird.com:3000/download/contacts.xlsx" download="contacts.xlsx" class="cust_btn_color"><i class="fas fa-download"></i> Download the template</a></li>
+                                        <li class="mb-2">5. <input type="file" #contactFile (click)="contactFile.value = null" value="" class="d-none" id="inputGroupFile01" (change)= "changeFile($event)" formControlName= "importedContacts" accept=".xlsx"> <a class="cust_btn_color" for="inputGroupFile01"  (click)= "fileOpen()"><i class="fas fa-folder-open"></i> Select the file</a> </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class=" form-group-btn mt-4">
+                                        <input type="submit" class="cust_btn_color btn" value="Import">
+                                        <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- imports_contacts -->
+
+
+
+
+    <!-- new_department -->
+    <div class="modal comm_popup-box fade" id="new_department" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" >{{deptStatus=='create'?'Create Department':'Edit Department'}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form [formGroup]="DeptGroup" #myform="ngForm" (ngSubmit)="createDept()">
+                        <div class="meet_now_form-box">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label><sup>*</sup> Department Name: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2">
+                                                        <input type="text" class="form-control" formControlName= "name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                        <label> 1-16 characters </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-12">
+                                                    <div class="mini-box mini-box1"> <label>Company: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mini-box mini-box2">
+                                                        <input type="text" class="form-control" disabled formControlName= "business_name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12">
+                                                    <div class="mini-box mini-box3">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class=" form-group-btn mt-4">
+                                        <input type="submit" value="Save">
+                                        <a href="#" data-dismiss="modal">Cancel</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- new_department -->
+    <div class="modal comm_popup-box fade" id="del_department" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" >Delete Department</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form #myform="ngForm" (ngSubmit)="delDept()">
+                        <div class= "col-12 mt-3" style=" text-align:center">
+                            Are you sure to delete this department?
+                        </div>
+                        <div class="col-12 mt-5">
+                            <div class=" form-group-btn mt-4">
+                                <input type="submit" value="Confirm">
+                                <a href="#" data-dismiss="modal">Cancel</a>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal comm_popup-box fade" id="del_contacts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" >Delete Contact</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form #myform="ngForm" (ngSubmit)="delBusinessContact()">
+                        <div class= "col-12 mt-3" style=" text-align:center">
+                            Are you sure to delete this contact from your contacts?
+                        </div>
+                        <div class="col-12 mt-5">
+                            <div class=" form-group-btn mt-4">
+                                <input type="submit" value="Confirm">
+                                <a href="#" data-dismiss="modal">Cancel</a>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- feed_back -->
+    <div class="modal fade comm_popup-box feed_back-popup_box" id="feed_back_box" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Feedback</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="meet_now_form-box">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Please enter your feedback"></textarea>
+
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="custom-file" for="customFile">
+                                        <input type="file" class="d-none" id="customFile" >
+                                        <label><i class="fas fa-cloud-upload-alt"></i> Upload Attachment (Up to 5 can be uploaded)</label>
+                                        <p>( File type: tar, zip, rar, jpg, png, mp4, avi, wav, txt, doc, pdf, gz )</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="row create_extra_email_boxes">
+                                        <div class="col-12">
+                                            <div class="mini-box mini-box1 "> <label class=" float-left"><sup>*</sup> Please enter your email address so that we can contact you in time.</label></div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="mini-box mini-box2">
+                                                <input type="email" class="form-control">
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <a href="#" class="add_email_box-btn"><i class="fa fa-plus"></i> Add</a>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <div class=" form-group-btn mt-4">
+                                    <a href="#" data-dismiss="modal">Cancel</a>
+                                    <input type="submit" value="Submit">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- feed_back -->
+
+
+
+</section>
+

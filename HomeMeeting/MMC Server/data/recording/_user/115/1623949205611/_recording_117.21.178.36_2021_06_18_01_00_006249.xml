@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<status>
+    <starttime utc="1623949230">20210618 01:00:00</starttime>
+    <!-- duration is in seconds -->
+    <duration>6</duration>
+    <!-- time is in seconds -->
+    <elapsed_time>645</elapsed_time>
+    <recording meeting_type="3" random_id="1185653994">true</recording>
+    <title>即时会议测试</title>
+    <last_token_holder>1</last_token_holder>
+    <!-- how the meeting is terminated. 0: empty room; 1: owner's request; 2: timer is over; 3: server shutdown; 4: other reason; 5: out of memory; 6: by admin -->
+    <how>2</how>
+    <participant userid="1" name="Administrator" />
+</status>
